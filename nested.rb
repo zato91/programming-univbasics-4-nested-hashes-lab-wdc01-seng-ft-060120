@@ -136,9 +136,14 @@ def adding_to_dennis
       },
       :dennis_ritchie => {
         :known_for => "Unix",
-        :languages => ["C","Assembly"]
+        :languages => ["C"]
       }
     }
-  #a = programmer_hash[:dennis_ritchie][:languages]
-  #a << "Assembly"
+    den_array = :dennis_ritchie
+      programmer_hash.each do |key, value|
+        if key == den_array
+             value[:languages] << "Assembly"
+        end
+      end
+  
 end
